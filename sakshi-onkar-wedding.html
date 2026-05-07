@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sakshi ❤️ Onkar — Wedding Celebration</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Josefin+Sans:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ivory: #FDF6E8;
+  --cream: #FAF0D2;
+  --gold1: #D4A017;
+  --gold2: #E8B830;
+  --gold3: #F5CE60;
+  --saffron: #E07020;
+  --saffron2: #C85010;
+  --marigold: #F5A020;
+  --vermillion: #B81C1C;
+  --deep: #5C1A00;
+  --text-dark: #3A1200;
+  --text-mid: #7A4010;
+  --text-soft: #AA7040;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background: var(--ivory);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+.top-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(92,26,0,0.97);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(212,160,23,0.2);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 54px;
+}
+.nav-brand {
+  font-family: 'Great Vibes', cursive; font-size: 1.55rem;
+  color: var(--gold3); letter-spacing: 1px; white-space: nowrap;
+}
+.nav-links { display: flex; gap: 4px; align-items: center; list-style: none; overflow-x: auto; scrollbar-width: none; }
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-link {
+  padding: 5px 14px; border-radius: 2px; font-size: .55rem; letter-spacing: 3px;
+  text-transform: uppercase; font-weight: 500; cursor: pointer; white-space: nowrap;
+  border: 1px solid transparent; color: rgba(245,206,96,.5);
+  text-decoration: none; transition: all 0.3s;
+}
+.nav-link:hover { color: var(--gold3); border-color: rgba(212,160,23,.3); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh; padding-top: 54px;
+  background: linear-gradient(175deg, #FBF0D0 0%, #FDF8E8 40%, #FAECD8 75%, #F8E8D0 100%);
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding-left: 2rem; padding-right: 2rem;
+}
+.jali-bg {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    repeating-linear-gradient(0deg,rgba(212,160,23,.06) 0,rgba(212,160,23,.06) 1px,transparent 0,transparent 48px),
+    repeating-linear-gradient(90deg,rgba(212,160,23,.06) 0,rgba(212,160,23,.06) 1px,transparent 0,transparent 48px);
+  background-size: 48px 48px;
+}
+.haze { position: absolute; pointer-events: none; border-radius: 50%; filter: blur(70px); }
+.hz1 { width: 60vw; height: 60vw; max-width: 680px; max-height: 680px; background: radial-gradient(ellipse,rgba(240,160,30,.2),transparent 70%); top:-10%; left:-15%; animation: hf 18s ease-in-out infinite; }
+.hz2 { width: 50vw; height: 50vw; max-width: 560px; max-height: 560px; background: radial-gradient(ellipse,rgba(200,80,16,.15),transparent 70%); bottom:-10%; right:-15%; animation: hf 22s ease-in-out infinite reverse; }
+.hz3 { width: 38vw; height: 38vw; max-width: 420px; max-height: 420px; background: radial-gradient(ellipse,rgba(245,180,30,.16),transparent 70%); top:40%; left:30%; animation: hf 15s ease-in-out infinite 3s; }
+@keyframes hf { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(20px,-25px) scale(1.05)} }
+
+.hero-inner { position: relative; z-index: 10; }
+.om-sym { font-size: 2.8rem; color: var(--saffron); display: block; animation: omP 4s ease-in-out infinite; filter: drop-shadow(0 2px 10px rgba(224,112,32,.35)); }
+@keyframes omP { 0%,100%{opacity:.75;transform:scale(1)} 50%{opacity:1;transform:scale(1.08)} }
+.om-text { font-family: 'Cormorant Garamond',serif; font-style: italic; font-size: .85rem; color: var(--gold1); letter-spacing: 3px; margin-top: .3rem; opacity: .85; }
+
+.invite-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: .56rem; font-weight: 500; letter-spacing: 5px; text-transform: uppercase;
+  color: var(--saffron); border: 1px solid rgba(212,160,23,.4);
+  padding: 7px 26px; border-radius: 2px; margin: 1.4rem 0;
+  background: rgba(253,246,232,.8);
+}
+.invite-badge::before, .invite-badge::after { content:"✦"; color:var(--gold2); font-size:.48rem; }
+
+.hero-names {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(3.8rem, 10vw, 9rem);
+  line-height: .88; color: var(--vermillion);
+  text-shadow: 0 4px 30px rgba(184,28,28,.2), 0 1px 0 rgba(212,160,23,.3);
+}
+.hero-names .amp {
+  display: block; font-family: 'Cormorant Garamond',serif; font-style: italic;
+  font-size: .27em; font-weight: 400; letter-spacing: 8px; color: var(--gold1);
+  margin: .3em 0; text-shadow: none;
+}
+
+.floral-div { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 1.4rem 0; }
+.floral-div .line { flex: 1; max-width: 110px; height: 1px; background: linear-gradient(to right, transparent, rgba(212,160,23,.6), transparent); }
+
+.hero-sub { font-family: 'Cormorant Garamond',serif; font-style: italic; font-size: clamp(.92rem,2vw,1.15rem); color: var(--text-mid); line-height: 2; max-width: 400px; margin: 0 auto; }
+.hero-dates { margin-top: 1.1rem; font-size: .58rem; letter-spacing: 6px; text-transform: uppercase; color: var(--saffron); font-weight: 500; }
+
+/* family cards */
+.families-row { display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2.8rem; }
+.fam-card {
+  text-align: center; padding: 1.6rem 2.2rem; border-radius: 4px;
+  background: rgba(253,246,232,.97); border: 1px solid rgba(212,160,23,.3);
+  box-shadow: 0 8px 40px rgba(212,160,23,.12), inset 0 1px 0 rgba(255,255,255,.8);
+  position: relative; overflow: hidden;
+}
+.fam-card::before { content:""; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--saffron),var(--gold2),var(--marigold),var(--gold2),var(--saffron)); }
+.fam-tag { font-size: .54rem; letter-spacing: 4px; text-transform: uppercase; color: var(--saffron); margin-bottom: .5rem; }
+.fam-name { font-family: 'Cormorant Garamond',serif; font-size: 1.25rem; font-weight: 700; color: var(--deep); }
+.fam-sub { font-size: .68rem; color: var(--text-soft); margin-top: 4px; letter-spacing: 1px; }
+
+/* scroll hint */
+.scroll-hint { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; z-index: 10; opacity: .6; animation: bounce 2s ease-in-out infinite; }
+.scroll-hint span { font-size: .5rem; letter-spacing: 3px; text-transform: uppercase; color: var(--saffron); }
+.scroll-hint svg { width: 20px; height: 20px; }
+@keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+
+/* ── EVENT SECTIONS ── */
+.event-section {
+  position: relative; overflow: hidden;
+  min-height: 100vh; display: flex; flex-direction: column;
+}
+.event-hero-band {
+  padding: 6rem 2rem 4rem; text-align: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 55vh; position: relative; overflow: hidden;
+}
+.event-day-label {
+  font-size: .56rem; letter-spacing: 5px; text-transform: uppercase;
+  font-weight: 500; margin-bottom: 1rem; position: relative; z-index: 2;
+}
+.event-number {
+  font-family: 'Cormorant Garamond',serif; font-size: clamp(5rem,16vw,13rem);
+  font-weight: 700; line-height: 1; opacity: .07; position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none;
+  white-space: nowrap; letter-spacing: -4px;
+}
+.event-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(3.2rem, 9vw, 7.5rem);
+  line-height: 1; position: relative; z-index: 2;
+}
+.event-date-line { font-size: .62rem; letter-spacing: 6px; text-transform: uppercase; font-weight: 500; margin-top: .9rem; position: relative; z-index: 2; opacity: .85; }
+.event-tagline {
+  font-family: 'Cormorant Garamond',serif; font-style: italic;
+  font-size: clamp(.9rem,1.8vw,1.1rem); line-height: 2;
+  max-width: 480px; margin: 1.4rem auto 0; position: relative; z-index: 2;
+}
+
+/* event body */
+.event-body { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; flex: 1; }
+
+/* detail cards */
+.detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+.detail-card {
+  padding: 1.6rem 1.2rem; border-radius: 4px; text-align: center;
+  background: rgba(253,248,238,.97); border: 1px solid rgba(212,160,23,.2);
+  box-shadow: 0 6px 24px rgba(212,160,23,.08); position: relative; overflow: hidden;
+}
+.detail-card::before { content:""; position:absolute; top:0; left:0; right:0; height:2px; }
+.detail-icon { font-size: 1.8rem; margin-bottom: .7rem; display: block; }
+.detail-label { font-size: .52rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: .35rem; }
+.detail-value { font-family: 'Cormorant Garamond',serif; font-size: 1rem; font-weight: 700; color: var(--deep); line-height: 1.4; }
+
+/* attire block */
+.attire-block {
+  text-align: center; padding: 2.2rem; border-radius: 4px;
+  border: 1px solid rgba(212,160,23,.25); background: rgba(253,246,232,.9);
+  margin-bottom: 2.2rem; position: relative; overflow: hidden;
+}
+.attire-block::before { content:""; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--saffron),var(--gold2),var(--marigold),var(--gold2),var(--saffron)); }
+.attire-tag { font-size: .53rem; letter-spacing: 4px; text-transform: uppercase; color: var(--saffron); margin-bottom: .7rem; }
+.attire-title { font-family: 'Cormorant Garamond',serif; font-size: 1.4rem; font-weight: 700; color: var(--deep); margin-bottom: .45rem; }
+.attire-desc { font-family: 'Cormorant Garamond',serif; font-style: italic; font-size: .93rem; color: var(--text-mid); line-height: 1.9; }
+.swatches { display: flex; gap: 10px; justify-content: center; margin-top: 1.1rem; flex-wrap: wrap; }
+.swatch { width: 38px; height: 38px; border-radius: 50%; border: 2px solid rgba(255,255,255,.6); box-shadow: 0 4px 10px rgba(0,0,0,.14); }
+
+/* venue block */
+.venue-block {
+  background: linear-gradient(145deg, var(--deep) 0%, #3A0C00 50%, #220800 100%);
+  border-radius: 4px; padding: 2.2rem; margin: 1.5rem 0;
+  text-align: center; position: relative; overflow: hidden;
+  box-shadow: 0 16px 50px rgba(0,0,0,.28);
+}
+.venue-block::before { content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse at 50% 30%,rgba(240,160,30,.1),transparent 60%); }
+.venue-inner { position: relative; z-index: 1; }
+.venue-tag { font-size: .53rem; letter-spacing: 5px; text-transform: uppercase; color: var(--gold2); margin-bottom: .7rem; }
+.venue-name { font-family: 'Cormorant Garamond',serif; font-size: clamp(1.3rem,3vw,2rem); font-weight: 700; color: var(--gold3); margin-bottom: .4rem; line-height: 1.2; }
+.venue-addr { font-family: 'Cormorant Garamond',serif; font-style: italic; font-size: .92rem; color: rgba(245,206,96,.55); line-height: 2; margin-bottom: 1.2rem; }
+.venue-tags-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 7px; }
+.vtag { padding: 4px 14px; border: 1px solid rgba(212,160,23,.2); border-radius: 2px; font-size: .53rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold2); background: rgba(255,255,255,.04); }
+
+/* note box */
+.note-box { text-align: center; padding: 1.8rem; border: 1px dashed rgba(212,160,23,.4); border-radius: 4px; background: rgba(253,246,232,.7); margin-top: 2rem; }
+.note-box p { font-family: 'Cormorant Garamond',serif; font-style: italic; font-size: .98rem; color: var(--text-mid); line-height: 2; }
+
+/* mandala divider */
+.mdiv { display: flex; align-items: center; justify-content: center; gap: 1rem; margin: 2rem 0; }
+.mdline { flex: 1; height: 1px; max-width: 160px; background: linear-gradient(to right, transparent, rgba(212,160,23,.4), transparent); }
+
+/* section divider wave */
+.wave-sep { display: block; width: 100%; overflow: hidden; line-height: 0; }
+
+/* wedding timeline */
+.wtl { max-width: 560px; margin: 0 auto 2.5rem; position: relative; }
+.wtl::before { content:""; position:absolute; left:50%; transform:translateX(-50%); top:0; bottom:0; width:1px; background:linear-gradient(to bottom,transparent,rgba(212,160,23,.4),rgba(212,160,23,.4),transparent); }
+.wtl-item { display: flex; gap: 1.5rem; margin-bottom: 1.8rem; position: relative; }
+.wtl-item:nth-child(even) { flex-direction: row-reverse; }
+.wtl-content { flex: 1; padding: 1.1rem 1.3rem; border-radius: 4px; background: rgba(253,248,238,.97); border: 1px solid rgba(212,160,23,.18); box-shadow: 0 4px 14px rgba(212,160,23,.08); }
+.wtl-item:nth-child(even) .wtl-content { text-align: right; }
+.wtl-dot { width: 11px; height: 11px; border-radius: 50%; background: linear-gradient(135deg, var(--gold1), var(--saffron)); position: absolute; left: 50%; transform: translateX(-50%); top: 1.2rem; box-shadow: 0 0 0 3px rgba(212,160,23,.2); flex-shrink: 0; }
+.wtl-time { font-size: .52rem; letter-spacing: 3px; text-transform: uppercase; color: var(--saffron); margin-bottom: .25rem; }
+.wtl-event { font-family: 'Cormorant Garamond',serif; font-size: .98rem; font-weight: 700; color: var(--deep); }
+.wtl-desc { font-size: .66rem; color: var(--text-soft); margin-top: 2px; }
+
+/* section title */
+.sec-title { font-family: 'Cormorant Garamond',serif; font-size: 1.7rem; font-weight: 700; color: var(--deep); margin-bottom: 1.3rem; text-align: center; }
+.sec-title em { color: var(--saffron); }
+
+/* ── HALDI colors ── */
+.haldi-band { background: linear-gradient(155deg,#FFFBF0,#FFF6DC,#FFEDBB); }
+.haldi-day { color: #8B5000; }
+.haldi-title { color: #8B4500; text-shadow: 0 4px 20px rgba(200,96,0,.2); }
+.haldi-date { color: #8B5000; }
+.haldi-tagline { color: #7A4010; }
+.haldi-dc::before { background: linear-gradient(90deg,#C86000,#E8A010,#F5C030,#E8A010,#C86000); }
+.haldi-label { color: #8B5000; }
+.haldi-num { color: rgba(200,96,0,.07); }
+
+/* ── MEHNDI colors ── */
+.mehndi-band { background: linear-gradient(155deg,#F5FFF0,#EAFAE4,#D8F5D0); }
+.mehndi-day { color: #2A6030; }
+.mehndi-title { color: #1A5020; text-shadow: 0 4px 20px rgba(42,96,48,.2); }
+.mehndi-date { color: #2A6030; }
+.mehndi-tagline { color: #3A6030; }
+.mehndi-dc::before { background: linear-gradient(90deg,#2A6030,#4A9048,#6ABF60,#4A9048,#2A6030); }
+.mehndi-label { color: #2A6030; }
+.mehndi-num { color: rgba(42,96,48,.07); }
+
+/* ── SANGEET colors ── */
+.sangeet-band { background: linear-gradient(155deg,#FFF5F0,#FFEDE8,#FFE0D8); }
+.sangeet-day { color: var(--saffron2); }
+.sangeet-title { color: var(--saffron2); text-shadow: 0 4px 20px rgba(200,80,16,.2); }
+.sangeet-date { color: var(--saffron2); }
+.sangeet-tagline { color: var(--text-mid); }
+.sangeet-dc::before { background: linear-gradient(90deg,var(--saffron2),var(--saffron),var(--marigold),var(--saffron),var(--saffron2)); }
+.sangeet-label { color: var(--saffron2); }
+.sangeet-num { color: rgba(200,80,16,.07); }
+
+/* ── WEDDING colors ── */
+.wedding-band { background: linear-gradient(155deg,#FFF0EC,#FFE8E4,#FFDDDD); }
+.wedding-day { color: var(--vermillion); }
+.wedding-title { color: var(--vermillion); text-shadow: 0 4px 22px rgba(184,28,28,.25); }
+.wedding-date { color: var(--vermillion); }
+.wedding-tagline { color: var(--text-mid); }
+.wedding-dc::before { background: linear-gradient(90deg,var(--vermillion),var(--saffron2),var(--saffron),var(--saffron2),var(--vermillion)); }
+.wedding-label { color: var(--vermillion); }
+.wedding-num { color: rgba(184,28,28,.07); }
+
+/* ── PHOTO SECTION ── */
+.photo-section {
+  background: linear-gradient(175deg, #FBF0D0, #FDF8E8, #FAECD8);
+  padding: 5rem 2rem; text-align: center; position: relative; overflow: hidden;
+}
+.photo-section-title { font-family: 'Great Vibes',cursive; font-size: clamp(2.5rem,7vw,5rem); color: var(--vermillion); margin-bottom: .4rem; }
+.photo-section-sub { font-family: 'Cormorant Garamond',serif; font-style: italic; font-size: 1rem; color: var(--text-mid); letter-spacing: 2px; margin-bottom: 2.5rem; }
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 14px; max-width: 860px; margin: 0 auto 3rem;
+}
+.photo-slot {
+  border-radius: 6px; overflow: hidden; position: relative;
+  border: 2px solid rgba(212,160,23,.3);
+  box-shadow: 0 8px 32px rgba(92,26,0,.12);
+  background: rgba(253,246,232,.9);
+  cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;
+  aspect-ratio: 4/3;
+}
+.photo-slot:hover { transform: translateY(-4px) scale(1.01); box-shadow: 0 16px 48px rgba(92,26,0,.2); }
+.photo-slot:nth-child(1) { grid-column: 1; grid-row: 1; }
+.photo-slot:nth-child(2) { grid-column: 2; grid-row: 1; }
+.photo-slot:nth-child(3) { grid-column: 3; grid-row: 1 / span 2; aspect-ratio: auto; min-height: 280px; }
+.photo-slot:nth-child(4) { grid-column: 1; grid-row: 2; }
+.photo-slot:nth-child(5) { grid-column: 2; grid-row: 2; }
+.photo-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo-placeholder {
+  width: 100%; height: 100%; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 10px;
+  color: var(--text-soft); min-height: 180px;
+}
+.photo-placeholder-icon { font-size: 2rem; opacity: .5; }
+.photo-placeholder-text { font-size: .56rem; letter-spacing: 3px; text-transform: uppercase; opacity: .6; }
+.photo-upload-input { display: none; }
+.photo-slot::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(92,26,0,.25));
+  pointer-events: none;
+}
+
+/* ── JOIN BUTTON ── */
+.join-section { text-align: center; padding: 3rem 2rem 5rem; background: linear-gradient(175deg,#FBF0D0,#FDF8E8); }
+.join-label { font-family: 'Cormorant Garamond',serif; font-style: italic; font-size: 1.1rem; color: var(--text-mid); margin-bottom: 1.5rem; letter-spacing: 1px; }
+.join-btn {
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 18px 48px; border-radius: 3px; cursor: pointer;
+  font-family: 'Josefin Sans',sans-serif; font-size: .65rem; letter-spacing: 5px;
+  text-transform: uppercase; font-weight: 500; border: none;
+  background: linear-gradient(135deg, var(--vermillion), var(--saffron2), var(--saffron));
+  color: var(--ivory); box-shadow: 0 12px 40px rgba(184,28,28,.35);
+  transition: all 0.3s; position: relative; overflow: hidden;
+}
+.join-btn::before { content:""; position:absolute; inset:0; background:linear-gradient(135deg,rgba(255,255,255,.12),transparent); pointer-events:none; }
+.join-btn:hover { transform: translateY(-3px); box-shadow: 0 20px 56px rgba(184,28,28,.45); }
+.join-btn:active { transform: translateY(-1px); }
+.join-btn-icon { font-size: 1.3rem; }
+
+@media (max-width: 600px) {
+  .photo-grid { grid-template-columns: repeat(2,1fr); grid-template-rows: auto; }
+  .photo-slot:nth-child(3) { grid-column: 1 / span 2; grid-row: auto; aspect-ratio: 16/7; min-height: unset; }
+  .photo-slot { aspect-ratio: 1; }
+  .photo-slot:nth-child(1),.photo-slot:nth-child(2),.photo-slot:nth-child(4),.photo-slot:nth-child(5) { grid-column: auto; grid-row: auto; }
+}
+.site-footer {
+  background: linear-gradient(135deg, var(--deep), #3A0800);
+  text-align: center; padding: 3rem 2rem;
+  border-top: 1px solid rgba(212,160,23,.12);
+}
+.sf-names { font-family: 'Cormorant Garamond',serif; font-size: 1.1rem; letter-spacing: 2px; margin-bottom: .5rem; color: var(--gold3); }
+.site-footer p { font-size: .6rem; letter-spacing: 1.5px; color: rgba(248,236,200,.35); }
+
+/* petals */
+.petals-wrap { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 5; }
+.petal { position: absolute; opacity: 0; animation: pf linear infinite; border-radius: 60% 0 60% 0; }
+@keyframes pf { 0%{transform:translateY(-60px) rotate(0deg);opacity:0} 8%{opacity:.85} 88%{opacity:.25} 100%{transform:translateY(110vh) rotate(720deg) translateX(55px);opacity:0} }
+
+@media (max-width: 640px) {
+  .top-nav { padding: 0 1rem; }
+  .nav-brand { font-size: 1.25rem; }
+  .nav-link { padding: 4px 9px; font-size: .48rem; letter-spacing: 2px; }
+  .wtl::before { left: 18px; }
+  .wtl-item { flex-direction: column !important; padding-left: 40px; }
+  .wtl-item:nth-child(even) .wtl-content { text-align: left; }
+  .wtl-dot { left: 12px; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="top-nav">
+  <div class="nav-brand">Sakshi ❤️ Onkar</div>
+  <ul class="nav-links">
+    <li><a class="nav-link" href="#hero">Home</a></li>
+    <li><a class="nav-link" href="#haldi">Haldi</a></li>
+    <li><a class="nav-link" href="#mehndi">Mehndi</a></li>
+    <li><a class="nav-link" href="#sangeet">Sangeet</a></li>
+    <li><a class="nav-link" href="#wedding">Wedding</a></li>
+    <li><a class="nav-link" href="#memories">Photos</a></li>
+  </ul>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero" class="hero">
+  <div class="jali-bg"></div>
+  <div class="haze hz1"></div>
+  <div class="haze hz2"></div>
+  <div class="haze hz3"></div>
+  <div class="petals-wrap" id="petals-home"></div>
+
+  <div class="hero-inner">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:.2rem">
+      <span class="om-sym">ॐ</span>
+      <span class="om-text">श्री गणेशाय नमः</span>
+    </div>
+    <div class="invite-badge">A Sacred Celebration</div>
+
+    <h1 class="hero-names">
+      Sakshi
+      <span class="amp">&amp;</span>
+      Onkar
+    </h1>
+
+    <div class="floral-div">
+      <div class="line"></div>
+      <svg width="32" height="32" viewBox="0 0 34 34"><g transform="translate(17,17)"><ellipse rx="9" ry="3.5" fill="#F5C030" opacity=".9"/><ellipse rx="9" ry="3.5" fill="#E07020" opacity=".85" transform="rotate(45)"/><ellipse rx="9" ry="3.5" fill="#F5C030" opacity=".9" transform="rotate(90)"/><ellipse rx="9" ry="3.5" fill="#D4A017" opacity=".85" transform="rotate(135)"/><circle r="5" fill="#E07020" opacity=".95"/></g></svg>
+      <div class="line"></div>
+    </div>
+
+    <p class="hero-sub">Bound by the blessings of the divine —<br>two souls, two families, one eternal bond.</p>
+    <div class="hero-dates">11 · 12 · 13 · 14 &nbsp;May 2026 &nbsp;·&nbsp; Adilabad</div>
+
+    <div class="families-row">
+      <div class="fam-card">
+        <div class="fam-tag">Bride's Family</div>
+        <div class="fam-name">The Bongirwar Family</div>
+        <div class="fam-sub">Parents of Sakshi</div>
+      </div>
+      <svg width="50" height="50" viewBox="0 0 52 52"><g transform="translate(26,26)"><ellipse rx="12" ry="5" fill="#F5C030" opacity=".85"/><ellipse rx="12" ry="5" fill="#E07020" opacity=".8" transform="rotate(60)"/><ellipse rx="12" ry="5" fill="#B81C1C" opacity=".75" transform="rotate(120)"/><ellipse rx="12" ry="5" fill="#3A6830" opacity=".7" transform="rotate(180)"/><ellipse rx="12" ry="5" fill="#E07020" opacity=".8" transform="rotate(240)"/><ellipse rx="12" ry="5" fill="#F5C030" opacity=".85" transform="rotate(300)"/><circle r="7" fill="#D4A017" opacity=".95"/><circle r="3.5" fill="#B81C1C" opacity=".9"/></g></svg>
+      <div class="fam-card">
+        <div class="fam-tag">Groom's Family</div>
+        <div class="fam-name">The Ollalwar Family</div>
+        <div class="fam-sub">Parents of Onkar</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <svg viewBox="0 0 20 20" fill="none" stroke="#E07020" stroke-width="2"><path d="M10 4v12M5 11l5 5 5-5"/></svg>
+  </div>
+</section>
+
+<!-- ══ HALDI ══ -->
+<section id="haldi" class="event-section">
+  <div class="petals-wrap" id="petals-haldi"></div>
+
+  <div class="event-hero-band haldi-band">
+    <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 20% 30%,rgba(240,160,30,.28),transparent 50%),radial-gradient(ellipse at 80% 70%,rgba(200,96,0,.16),transparent 50%)"></div>
+    <div class="event-number haldi-num">HALDI</div>
+    <div class="event-day-label haldi-day">Day One · Monday · 11 May 2026</div>
+    <h2 class="event-title haldi-title">Haldi</h2>
+    <div class="event-date-line haldi-date">11 May 2026 · Monday</div>
+    <p class="event-tagline haldi-tagline">A golden beginning — the sacred turmeric ceremony that blesses the bride and groom with radiance, purity, and the warmth of family love before the grand union.</p>
+  </div>
+
+  <div class="event-body">
+    <div class="detail-grid">
+      <div class="detail-card haldi-dc">
+        <span class="detail-icon">📅</span>
+        <div class="detail-label haldi-label">Date</div>
+        <div class="detail-value">Monday<br>11 May 2026</div>
+      </div>
+      <div class="detail-card haldi-dc">
+        <span class="detail-icon">🕙</span>
+        <div class="detail-label haldi-label">Time</div>
+        <div class="detail-value">Morning<br>10:00 AM Onwards</div>
+      </div>
+      <div class="detail-card haldi-dc">
+        <span class="detail-icon">📍</span>
+        <div class="detail-label haldi-label">Venue</div>
+        <div class="detail-value">Family Residence<br>Adilabad</div>
+      </div>
+      <div class="detail-card haldi-dc">
+        <span class="detail-icon">👗</span>
+        <div class="detail-label haldi-label">Dress Code</div>
+        <div class="detail-value">Yellow &<br>Mustard Tones</div>
+      </div>
+    </div>
+
+    <div class="attire-block">
+      <div class="attire-tag">Dress Code</div>
+      <div class="attire-title">Yellow & Gold — The Colors of Joy</div>
+      <div class="attire-desc">
+        Come dressed in the bright, cheerful shades of turmeric and sunshine.<br>
+        Yellows, mustards, golden-yellows and greens are warmly welcome.<br>
+        <em>Please avoid white as it may stain during the ceremony.</em>
+      </div>
+      <div class="swatches">
+        <div class="swatch" style="background:#F5C030"></div>
+        <div class="swatch" style="background:#E8A010"></div>
+        <div class="swatch" style="background:#C8860A"></div>
+        <div class="swatch" style="background:#8BC050"></div>
+        <div class="swatch" style="background:#F0D060"></div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <p>🌿 <strong>Note from the family:</strong> Please arrive a little early to enjoy the pre-ceremony blessings and share in the joy of this auspicious morning with us.<br><em>"हल्दी की खुशबू, प्यार का रंग — Sakshi & Onkar की यह शादी अनोखी है।"</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MEHNDI ══ -->
+<section id="mehndi" class="event-section" style="background:#F8FFF5">
+  <div class="petals-wrap" id="petals-mehndi"></div>
+
+  <div class="event-hero-band mehndi-band">
+    <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 25% 40%,rgba(74,144,72,.18),transparent 50%),radial-gradient(ellipse at 75% 60%,rgba(42,96,48,.1),transparent 50%)"></div>
+    <div class="event-number mehndi-num">MEHNDI</div>
+    <div class="event-day-label mehndi-day">Day Two · Tuesday · 12 May 2026</div>
+    <h2 class="event-title mehndi-title">Mehndi</h2>
+    <div class="event-date-line mehndi-date">12 May 2026 · Tuesday</div>
+    <p class="event-tagline mehndi-tagline">The bride's hands become a canvas of love — intricate henna patterns tell stories of joy, romance, and the beautiful journey that awaits Sakshi and Onkar.</p>
+  </div>
+
+  <div class="event-body">
+    <div class="detail-grid">
+      <div class="detail-card mehndi-dc">
+        <span class="detail-icon">📅</span>
+        <div class="detail-label mehndi-label">Date</div>
+        <div class="detail-value">Tuesday<br>12 May 2026</div>
+      </div>
+      <div class="detail-card mehndi-dc">
+        <span class="detail-icon">🕑</span>
+        <div class="detail-label mehndi-label">Time</div>
+        <div class="detail-value">Afternoon<br>2:00 PM Onwards</div>
+      </div>
+      <div class="detail-card mehndi-dc">
+        <span class="detail-icon">📍</span>
+        <div class="detail-label mehndi-label">Venue</div>
+        <div class="detail-value">Family Residence<br>Adilabad</div>
+      </div>
+      <div class="detail-card mehndi-dc">
+        <span class="detail-icon">👗</span>
+        <div class="detail-label mehndi-label">Dress Code</div>
+        <div class="detail-value">Greens, Pinks<br>& Pastels</div>
+      </div>
+    </div>
+
+    <div class="attire-block">
+      <div class="attire-tag">Dress Code</div>
+      <div class="attire-title">Greens, Pinks & Pastels — Nature's Palette</div>
+      <div class="attire-desc">
+        Let the colors of nature adorn you on this beautiful evening.<br>
+        Emerald greens, blush pinks, mint, lavender — all are welcome!<br>
+        <em>Ladies, if you'd like mehndi too, please inform us in advance.</em>
+      </div>
+      <div class="swatches">
+        <div class="swatch" style="background:#3A8040"></div>
+        <div class="swatch" style="background:#E8A0B0"></div>
+        <div class="swatch" style="background:#80C090"></div>
+        <div class="swatch" style="background:#C0B0E0"></div>
+        <div class="swatch" style="background:#F0D0A0"></div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <p>🌸 <strong>Fun tradition:</strong> The groom must find his name hidden in the bride's mehndi pattern. Until he finds it, the bride's hands are his to seek — can Onkar find it?<br><em>Come join us in this beautiful evening of art, laughter and celebration!</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SANGEET ══ -->
+<section id="sangeet" class="event-section">
+  <div class="petals-wrap" id="petals-sangeet"></div>
+
+  <div class="event-hero-band sangeet-band">
+    <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 30% 40%,rgba(224,112,32,.18),transparent 50%),radial-gradient(ellipse at 70% 60%,rgba(200,80,16,.13),transparent 50%)"></div>
+    <div class="event-number sangeet-num">SANGEET</div>
+    <div class="event-day-label sangeet-day">Day Three · Wednesday · 13 May 2026</div>
+    <h2 class="event-title sangeet-title">Sangeet</h2>
+    <div class="event-date-line sangeet-date">13 May 2026 · Wednesday</div>
+    <p class="event-tagline sangeet-tagline">A night of music, laughter and uninhibited joy — where both families come together to sing, dance and celebrate the love that brings them all together forever.</p>
+  </div>
+
+  <div class="event-body">
+    <div class="detail-grid">
+      <div class="detail-card sangeet-dc">
+        <span class="detail-icon">📅</span>
+        <div class="detail-label sangeet-label">Date</div>
+        <div class="detail-value">Wednesday<br>13 May 2026</div>
+      </div>
+      <div class="detail-card sangeet-dc">
+        <span class="detail-icon">🕖</span>
+        <div class="detail-label sangeet-label">Time</div>
+        <div class="detail-value">Evening<br>6:00 PM Onwards</div>
+      </div>
+      <div class="detail-card sangeet-dc">
+        <span class="detail-icon">📍</span>
+        <div class="detail-label sangeet-label">Venue</div>
+        <div class="detail-value">Srinivasa Kalyana<br>Mandapam, Adilabad</div>
+      </div>
+      <div class="detail-card sangeet-dc">
+        <span class="detail-icon">👗</span>
+        <div class="detail-label sangeet-label">Dress Code</div>
+        <div class="detail-value">Festive &<br>Vibrant Colors</div>
+      </div>
+    </div>
+
+    <div class="venue-block">
+      <div class="venue-inner">
+        <div class="venue-tag">Sangeet Venue</div>
+        <div class="venue-name">Srinivasa Kalyana Mandapam</div>
+        <div class="venue-addr">Jagannath Resort · Rampur Road<br>Near ISCON Temple · Adilabad, Telangana</div>
+        <div class="venue-tags-row">
+          <span class="vtag">Grand Banquet Hall</span>
+          <span class="vtag">Sound System</span>
+          <span class="vtag">Dance Floor</span>
+          <span class="vtag">Adilabad</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="attire-block">
+      <div class="attire-tag">Dress Code</div>
+      <div class="attire-title">Festive & Vibrant — Bring Your Colors!</div>
+      <div class="attire-desc">
+        Tonight is for dancing — wear what makes you feel alive and beautiful!<br>
+        Bold reds, royal blues, deep purples, hot pinks — go all out.<br>
+        <em>Comfortable footwear recommended — you will be dancing all night!</em>
+      </div>
+      <div class="swatches">
+        <div class="swatch" style="background:#C01818"></div>
+        <div class="swatch" style="background:#1828A0"></div>
+        <div class="swatch" style="background:#8818A0"></div>
+        <div class="swatch" style="background:#E01870"></div>
+        <div class="swatch" style="background:#E08018"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WEDDING ══ -->
+<section id="wedding" class="event-section" style="background:#FFF8F6">
+  <div class="petals-wrap" id="petals-wedding"></div>
+
+  <div class="event-hero-band wedding-band" style="min-height:60vh">
+    <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 40%,rgba(184,28,28,.15),transparent 55%),radial-gradient(ellipse at 20% 70%,rgba(200,80,16,.1),transparent 45%)"></div>
+    <!-- mandap silhouette -->
+    <svg style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:min(560px,88vw);opacity:.06;pointer-events:none" viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <rect x="120" y="100" width="30" height="300" rx="4" fill="#D4A017"/>
+      <rect x="550" y="100" width="30" height="300" rx="4" fill="#D4A017"/>
+      <path d="M120,100 Q350,-60 580,100" stroke="#D4A017" stroke-width="8" fill="none"/>
+      <path d="M150,100 Q200,200 160,300" stroke="#E07020" stroke-width="5" fill="none"/>
+      <path d="M550,100 Q500,200 540,300" stroke="#E07020" stroke-width="5" fill="none"/>
+      <rect x="100" y="370" width="500" height="30" rx="4" fill="#D4A017"/>
+    </svg>
+    <div class="event-number wedding-num">VIVAH</div>
+    <div class="event-day-label wedding-day">Day Four · The Grand Finale · Thursday</div>
+    <h2 class="event-title wedding-title" style="font-size:clamp(3.5rem,10vw,8rem)">Vivah</h2>
+    <div class="event-date-line wedding-date">14 May 2026 · Thursday</div>
+    <p class="event-tagline wedding-tagline">The most sacred day — as Sakshi and Onkar take their vows beneath the sacred fire, two lives become one in the most beautiful ceremony of all.</p>
+  </div>
+
+  <div class="event-body">
+    <div class="detail-grid">
+      <div class="detail-card wedding-dc">
+        <span class="detail-icon">📅</span>
+        <div class="detail-label wedding-label">Date</div>
+        <div class="detail-value">Thursday<br>14 May 2026</div>
+      </div>
+      <div class="detail-card wedding-dc">
+        <span class="detail-icon">🕘</span>
+        <div class="detail-label wedding-label">Muhurat</div>
+        <div class="detail-value">Auspicious Time<br>To Be Announced</div>
+      </div>
+      <div class="detail-card wedding-dc">
+        <span class="detail-icon">📍</span>
+        <div class="detail-label wedding-label">Venue</div>
+        <div class="detail-value">Srinivasa Kalyana<br>Mandapam, Adilabad</div>
+      </div>
+      <div class="detail-card wedding-dc">
+        <span class="detail-icon">👗</span>
+        <div class="detail-label wedding-label">Dress Code</div>
+        <div class="detail-value">Traditional<br>Formals</div>
+      </div>
+    </div>
+
+    <div class="venue-block">
+      <div class="venue-inner">
+        <div class="venue-tag">Wedding Venue</div>
+        <div class="venue-name">Srinivasa Kalyana Mandapam</div>
+        <div class="venue-addr">Jagannath Resort · Rampur Road<br>Near ISCON Temple · Adilabad, Telangana</div>
+        <div class="venue-tags-row">
+          <span class="vtag">Grand Mandap</span>
+          <span class="vtag">Sacred Fire</span>
+          <span class="vtag">Traditional Setting</span>
+          <span class="vtag">Jagannath Resort</span>
+          <span class="vtag">Adilabad</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="attire-block">
+      <div class="attire-tag">Dress Code</div>
+      <div class="attire-title">Traditional Formals — Your Finest Attire</div>
+      <div class="attire-desc">
+        Honor this sacred occasion with your most beautiful traditional wear.<br>
+        Sarees, lehengas, sherwanis, kurtas — the mandap deserves your best.<br>
+        <em>Reds, maroons, royal blues and rich jewel tones are most auspicious.</em>
+      </div>
+      <div class="swatches">
+        <div class="swatch" style="background:#8B0000"></div>
+        <div class="swatch" style="background:#600010"></div>
+        <div class="swatch" style="background:#0A2878"></div>
+        <div class="swatch" style="background:#3A1060"></div>
+        <div class="swatch" style="background:#D4A017"></div>
+      </div>
+    </div>
+
+    <div class="note-box" style="padding:2.5rem">
+      <p style="font-size:1.08rem">
+        ❤️ <strong>With folded hands and joyful hearts,</strong><br>
+        the Bongirwar & Ollalwar families request your<br>
+        presence, blessings, and warm company on this<br>
+        most sacred and beautiful day of our lives.<br><br>
+        <em>"आपका आशीर्वाद हमारी सबसे बड़ी दौलत है।"</em><br>
+        <span style="font-size:.78rem;letter-spacing:2px;opacity:.7">Your blessings are our greatest treasure.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PHOTO MEMORIES ══ -->
+<section class="photo-section" id="memories">
+  <div class="jali-bg" style="opacity:.5"></div>
+  <div style="position:relative;z-index:2">
+    <div style="font-size:.56rem;letter-spacing:5px;text-transform:uppercase;color:var(--saffron);margin-bottom:.6rem">✦ Our Story ✦</div>
+    <div class="photo-section-title">Memories</div>
+
+    <div class="photo-grid" id="photoGrid">
+      <div class="photo-slot">
+        <img src="3.jpeg" alt="Memory 1">
+      </div>
+      <div class="photo-slot">
+        <img src="2.jpeg" alt="Memory 2">
+      </div>
+      <div class="photo-slot">
+        <img src="1.jpeg" alt="Memory 3">
+      </div>
+      <div class="photo-slot">
+        <img src="4.jpeg" alt="Memory 4">
+      </div>
+      <div class="photo-slot">
+        <img src="5.jpeg" alt="Memory 5">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ JOIN THE CELEBRATION ══ -->
+<div class="join-section">
+  <p class="join-label">We are so glad you're celebrating with us —</p>
+  <button class="join-btn" onclick="downloadVideo()">
+    <span class="join-btn-icon">🎊</span>
+    Join the Celebration
+    <span class="join-btn-icon">🎊</span>
+  </button>
+  <p style="font-size:.52rem;letter-spacing:2px;color:var(--text-soft);margin-top:1.2rem;text-transform:uppercase">Download our celebration video</p>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="sf-names">Sakshi ❤️ Onkar</div>
+  <p>11–14 May 2026 · Srinivasa Kalyana Mandapam, Adilabad</p>
+  <p style="margin-top:6px">Crafted with love & marigolds 🌼</p>
+</footer>
+
+<script>
+const petalColors = {
+  home:    ['#F5C030','#E07020','#B81C1C','#D4A017','#3A6830','#F5A020'],
+  haldi:   ['#F5C030','#E8A010','#C8860A','#F5E040','#D4A017','#F0C030'],
+  mehndi:  ['#3A8040','#5AAF58','#E8A0B0','#C0D860','#80C090','#A0D890'],
+  sangeet: ['#E07020','#C85010','#F5A020','#D4A017','#B81C1C','#FF8040'],
+  wedding: ['#B81C1C','#C85010','#E07020','#D4A017','#F5C030','#FF9080'],
+};
+Object.keys(petalColors).forEach(key => {
+  const container = document.getElementById('petals-' + key);
+  if (!container) return;
+  const colors = petalColors[key];
+  for (let i = 0; i < 20; i++) {
+    const p = document.createElement('div');
+    p.className = 'petal';
+    const sz = Math.random() * 11 + 6;
+    p.style.cssText = `width:${sz}px;height:${sz*.6}px;background:${colors[Math.floor(Math.random()*colors.length)]};left:${Math.random()*100}%;animation-duration:${Math.random()*10+14}s;animation-delay:${Math.random()*20}s;opacity:0`;
+    container.appendChild(p);
+  }
+});
+
+// Video download — replace VIDEO_FILE_URL with actual video link
+function downloadVideo() {
+  const videoUrl = 'wedding.mp4';
+  const a = document.createElement('a');
+  a.href = videoUrl;
+  a.download = 'Sakshi-Onkar-Celebration.mp4';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+const sections = ['hero','haldi','mehndi','sangeet','wedding','memories'];
+const links = document.querySelectorAll('.nav-link');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      links.forEach(l => l.style.color = '');
+      const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+      if (active) active.style.color = '#F5CE60';
+    }
+  });
+}, { threshold: 0.3 });
+sections.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
+</script>
+</body>
+</html>
